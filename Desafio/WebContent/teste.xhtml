@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<style type="text/css">
+.tema {
+	font-family: Andale Mono, monospace;
+	color: black;
+	text-align: center;
+	border: 2px solid black;
+	background-color: white;
+	border-radius: 10px;
+	width: 550px;
+}
+
+
+</style>
+
+<ui:composition template="/templatePrincipal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<h2>Listar Usuários</h2>
+
+<div  class="tema">
+
+				
+				<p:column>
+					<h:outputLabel value="E-mail:" />
+				</p:column>
+				<p:column>
+					<p:inputText value="#{UsuarioBean.usuario.email}" />
+				</p:column>
+			
+					<p:commandButton value="Listar Usuários" update="@form"
+						actionListener="#{UsuarioBean.pesquisar}" />
+		
+
+	 
+</div>
+	</ui:define>
+
+</ui:composition>
+</html>

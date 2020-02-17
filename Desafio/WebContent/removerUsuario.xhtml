@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+
+<ui:composition template="/templatePrincipal.xhtml">
+	
+<ui:define name="conteudo">
+
+<h2>Remover Usuário</h2>
+
+
+		<p:panelGrid columns="2">
+
+
+			<p:row>
+				<p:column>
+					<h:outputLabel value="E-mail:" />
+				</p:column>
+				<p:column>
+					<p:inputText value="#{UsuarioBean.usuario.email}" />
+				</p:column>
+			</p:row>
+
+
+			<p:row>
+				<p:column>
+				
+				</p:column>
+				<p:column>
+					<p:commandButton value="Remover" update="@form"
+						actionListener="#{UsuarioBean.remover}" />
+				</p:column>
+
+			</p:row>
+
+		</p:panelGrid>
+
+
+
+</ui:define>
+
+</ui:composition>
+</html>

@@ -1,0 +1,79 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<style type="text/css">
+.conteudo {
+	
+	text-align: center;
+	width: 600px;
+	font-family: Andale Mono, monospace;
+	
+	}
+	.tema {
+	font-family: Andale Mono, monospace;
+	color: black;
+	text-align: center;
+	border: 2px solid black;
+	background-color: white;
+	border-radius: 10px;
+	width: 550px;
+}
+.botao {
+	color: black;
+	text-align: center;
+	border: 2px solid black;
+	background-color: white;
+	width: 550px;
+}
+	
+</style>
+
+<h:body>
+<h:form>
+
+	<p:panelGrid>
+		<p:row>
+			<p:column colspan="2">
+				<ui:insert name="cabecalho">
+					<h1 class="tema">Cadastro</h1>
+				</ui:insert>
+			</p:column>
+		</p:row>
+
+		<p:row>
+			<p:column class="conteudo">
+				<ui:insert name="conteudo">
+				<h2>Menu:</h2>
+    
+        <p:linkButton class="botao" outcome="incluirUsuario" value="Inserir Usuário" style="margin-right:20px;" /> <br />
+		
+		<br />
+		
+		<p:linkButton class="botao" outcome="alterarUsuario" value="Alterar Usuário" style="margin-right:20px;" /> <br />
+		
+		<br />
+		
+		<p:linkButton class="botao" outcome="consultarUsuario" value="Consultar Usuários" style="margin-right:20px;" /> <br />
+		
+		<br />
+		
+		<p:linkButton class="botao" outcome="removerUsuario" value="Remover Usuário" style="margin-right:20px;" /> <br />
+    
+    
+    </ui:insert>
+			</p:column>
+		</p:row>
+
+	</p:panelGrid>
+
+
+
+
+
+</h:form>
+
+</h:body>
+</html>

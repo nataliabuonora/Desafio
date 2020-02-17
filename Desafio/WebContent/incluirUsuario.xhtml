@@ -1,0 +1,93 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<style type="text/css">
+.tema {
+	font-family: Andale Mono, monospace;
+	color: black;
+	text-align: center;
+	border: 2px solid black;
+	background-color: white;
+	border-radius: 10px;
+	width: 550px;
+}
+
+
+</style>
+<ui:composition template="/templatePrincipal.xhtml">
+
+	<ui:define name="conteudo">
+<h2>Incluir Usuário</h2>
+
+		<p:panelGrid class="tema" columns="2">
+		
+
+			<p:row>
+				<p:column>
+					<h:outputLabel value="Nome:" />
+				</p:column>
+				<p:column>
+					<p:inputText value="#{UsuarioBean.usuario.nome}" />
+				</p:column>
+			</p:row>
+
+			<p:row>
+				<p:column>
+					<h:outputLabel value="E-mail:" />
+				</p:column>
+				<p:column>
+					<p:inputText value="#{UsuarioBean.usuario.email}" />
+				</p:column>
+			</p:row>
+
+			<p:row>
+				<p:column>
+					<h:outputLabel value="Senha:" />
+				</p:column>
+				<p:column>
+					<p:inputText type="password" value="#{UsuarioBean.usuario.senha}" />
+				</p:column>
+			</p:row>
+
+
+			<p:row>
+	<p:column>
+<h:outputLabel value="Telefones:" /> 
+	</p:column>
+	
+	<p:column>
+<p:inputText size ="3" maxlength="3" />
+<p:inputText size ="2" maxlength="2" />
+<p:inputText size ="9" maxlength="9" />
+	</p:column>
+	</p:row>
+
+
+			<p:row>
+				<p:column>
+
+				</p:column>
+				<p:column>
+					<p:commandButton value="Salvar" update="@form"
+						actionListener="#{UsuarioBean.salvar}" />
+				</p:column>
+
+			</p:row>
+
+		</p:panelGrid>
+
+	</ui:define>
+
+</ui:composition>
+
+
+
+
+
+
+
+
+</html>
